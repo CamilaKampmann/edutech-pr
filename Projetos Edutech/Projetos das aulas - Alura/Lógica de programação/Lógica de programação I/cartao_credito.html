@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var senhaCadastrada = "1234";
+
+    var maximoTentativas = 3;
+    var tentativaAtual = 1;
+
+    while(tentativaAtual <= maximoTentativas) {
+
+        var nomeCadastrado = prompt("Informe seu nome:");
+        var senhaInformada = prompt(nomeCadastrado + ", informe sua senha:");
+
+        if(senhaCadastrada == senhaInformada ) {
+
+            alert("Sua compra foi realizada, " + nomeCadastrado + '.');
+
+            tentativaAtual = maximoTentativas;
+
+        } else {
+
+            if (tentativaAtual == 3) {
+                alert("Senha inválida. Seu cartão foi bloqueado!");
+            } else {
+                alert("Senha incorreta. Tente novamente");
+            }
+        }
+
+        tentativaAtual = tentativaAtual +1  
+    }
+
+</script>
