@@ -1,0 +1,57 @@
+<meta charset="UTF-8">
+
+<script>
+
+ function pulaLinha() {
+
+ 	document.write("<br>");
+
+ }
+
+ function mostra(frase) {
+
+ 	document.write(frase);
+ 	pulaLinha();
+
+ }
+
+ var nome = prompt("Informe seu nome:");
+ var pesoInformado = prompt( nome + ", informe o seu peso:");
+ var alturaInformada = prompt( nome + ", informe a sua altura:");
+
+ var imc = Math.round(pesoInformado / (alturaInformada * alturaInformada));
+
+ mostra( nome + ", o seu imc é: " + imc);
+
+ if(imc < 18.5) {
+ 	mostra("Seu Indíce de Massa Muscular, está mais baixo que o normal. Procure um médico em sua região, para orientações de saúde.");
+ }
+ 
+ if(imc > 29.9) {
+ 	mostra("Seu Indíce de Massa Muscular, está alto. Procure um médico em sua região, para orientações de saúde.");
+
+ }
+ 
+ if(imc > 25) {
+ 	mostra("Seu Indíce de Massa Muscula, está levemente acima do ideal. Procure um médico em sua região, para orientações de saúde.");
+
+ }
+
+ if(imc > 35) {
+ 	mostra("Seu Indíce de Massa Muscular, está mais alto que o normal. Procure um médico em sua região, para orientações de saúde.");
+
+ }
+
+ if(imc > 40) {
+ 	mostra("Seu Indíce de Massa Muscular, está muito mais alto que o indíce normal. Procure um medico em sua região, o mais rápido possível, para orientações de saúde.");
+
+ }
+ 
+ if(imc >= 18 && imc <= 25) {
+ 	mostra("Seu Indíce de Massa Muscular, está no ideal. Parabéns!");
+ 	
+ }
+
+</script>
+
+Para mais informações, clique <a href="https://www.programasaudefacil.com.br/calculadora-de-imc">aqui</a>, e vá para o site do Programa Saúde Fácil.
